@@ -1,0 +1,37 @@
+.Form_mid_Entries{
+    padding: 50px;
+}
+
+.Form_mid_Entries_Up{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: lightgray;
+}
+.Form_mid_Entries_Down{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: lightgray;
+   
+   
+}
+.label{
+    min-width: 50px;
+}
+.Form_Mid_Input{
+    border-radius: 30px;
+}
+.Form_Bottom{
+    background-color: darkgray;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.Form_Bottom button{
+    background-color: darkslategray;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}

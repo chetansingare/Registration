@@ -17,15 +17,15 @@ function Form() {
             <div className='Form_mid_Entries'>
               <div className='Form_mid_Entries_Up'>
                 <label className='label'>Name</label>
-                <input />
+                <input className='Form_Mid_Input'/>
                 <label className='label'>Email</label>
-                <input />
+                <input className='Form_Mid_Input'/>
               </div>
               <div className='Form_mid_Entries_Down'>
                 <label className='label'>Age</label>
-                <input />
+                <input className='Form_Mid_Input'/>
                 <label className='label'>Contact</label>
-                <input />
+                <input className='Form_Mid_Input'/>
               </div>
             </div>
           </div>

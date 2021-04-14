@@ -1,5 +1,6 @@
 .Form_Main{
-    background-color: #6770D2;
+    background-image: url(https://mcdn.wallpapersafari.com/medium/23/17/zBJw45.jpg);
+    height: 740px;
 }
 .Form{
     width:1164px;
@@ -10,6 +11,7 @@
 .Form_Top{
     text-align: center;
     color: white;
+    font-family: cursive;
 }
 .Form_Mid{
     background-color: white;
@@ -21,36 +23,63 @@
 .Form_Mid_Button_Left{
     background-color: transparent;
     outline: none;
+    background-color: lightgray;
+    font-family: Jazz LET, fantasy;
+    letter-spacing: 2px;
 }
 .Form_Mid_Button_Left:hover{
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    background-color: darkslategray;
+    color: white;
 
 }
 .Form_Mid_Button_Right{
     background-color: transparent;
     outline: none;
+    background-color: lightgray;
+    font-family: Jazz LET, fantasy;
+    letter-spacing: 2px;
 }
 .Form_Mid_Button_Right:hover{
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    background-color: darkslategray;
+    color: white;
+}
+.Form_mid_Entries{
+    padding: 50px;
 }
 .Form_mid_Entries_Up{
     display: flex;
     justify-content: space-between;
     padding: 20px;
-
+    background-color: lightgray;
 }
 .Form_mid_Entries_Down{
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    background-color: lightgray;
+   
    
 }
 .label{
     min-width: 50px;
 }
+.Form_Mid_Input{
+    border-radius: 30px;
+}
 .Form_Bottom{
-    background-color: #6770D2;
-    padding: 50px;
+    background-color: darkgray;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.Form_Bottom button{
+    background-color: darkslategray;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    outline: none;
 }

@@ -1,0 +1,56 @@
+.Form_Main{
+    background-color: #6770D2;
+}
+.Form{
+    width:1164px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 100px;
+}
+.Form_Top{
+    text-align: center;
+    color: white;
+}
+.Form_Mid{
+    background-color: white;
+}
+.Form_Mid_button button{
+    width:50%;
+    padding: 20px;
+}
+.Form_Mid_Button_Left{
+    background-color: transparent;
+    outline: none;
+}
+.Form_Mid_Button_Left:hover{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+.Form_Mid_Button_Right{
+    background-color: transparent;
+    outline: none;
+}
+.Form_Mid_Button_Right:hover{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.Form_mid_Entries_Up{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+.Form_mid_Entries_Down{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+   
+}
+.label{
+    min-width: 50px;
+}
+.Form_Bottom{
+    background-color: #6770D2;
+    padding: 50px;
+}

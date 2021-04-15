@@ -1,0 +1,25 @@
+{
+  "user": [
+    {
+      "Name": "asd",
+      "Email": "acasc",
+      "Age": "asc",
+      "Contact": "asc",
+      "id": 1
+    },
+    {
+      "Name": "sdad",
+      "Email": "sadda",
+      "Age": "asdad",
+      "Contact": "asdsa",
+      "id": 2
+    },
+    {
+      "Name": "asc asdasd",
+      "Email": "chetansingare.cs@gmail.com",
+      "Age": "",
+      "Contact": "",
+      "id": 3
+    }
+  ]
+}

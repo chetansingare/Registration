@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import './Entries.css'
-import thunkAction from './thunkAction'
+import thunkAction  from './thunkAction'
 
 
 function Transfer(dispatch) {

@@ -4,6 +4,11 @@ const thunkreducer = (intialState = {}, action) => {
             return ({
                 state: action.userData
             })
+        case "Getdata":
+            console.log("actoin data",action.userData);
+            return ({
+                state: action.userData
+            })
         default:
             return intialState
     }

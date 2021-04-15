@@ -1,17 +1,17 @@
 import axios from "axios"
 
-function thunkAction(InitialData) {
-  console.log(InitialData);
+function thunkGetAction() {
   return (dispatch) => {
-    axios.post('http://localhost:8000/user', InitialData).then(
+    axios.get("http://localhost:8000/user").then(
       (resolve) => {
         const data = resolve.data
         dispatch({
-          type: "Postdata",
+          type: "Getdata",
           userData: data
         })
       },
       (reject) => {
+        console.log(reject);
         dispatch({
           type: "rejected",
           status: reject.message
@@ -21,4 +21,4 @@ function thunkAction(InitialData) {
   }
 }
 
-export default thunkAction
+export default thunkGetAction

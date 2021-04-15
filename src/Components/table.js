@@ -1,33 +1,39 @@
 import { React } from "react";
+import thunkGetAction from "./thunk2";
 import './Table.css'
+import { connect } from "react-redux";
 
-function getData(dispatch){
-
-  Take:()=>dispatch()
-
+function getData(dispatch) {
+  return ({
+    TakeData: () => dispatch(thunkGetAction())
+  })
 }
 
-function Table() {
+const showdata = (state) => ({
+  display: state.thunkreducer.state
+})
 
-  // const table_list = table.map((element, index) => {
-  //   console.log('element ', element)
+function Table(props) {
+  console.log(typeof(props.display),props.display);
+  // const table_list = props.display.map((element, index) => {
   //   return (
   //     <tr key={index}>
-  //       <td>{index+1}</td>
+  //       <td>{index + 1}</td>
   //       <td>
   //         <p>{element.firstName}</p>
   //       </td>
   //       <td>
   //         <p>{element.lastName}</p>
   //       </td>
-  //       <td><button value={index} onClick={edit}>edit</button></td>
-  //       <td><button value={index} onClick={remove} >delete</button></td>
+  //       <td>edit</td>
+  //       <td>delete</td>
   //     </tr>
   //   )
   // })
 
   return (
     <>
+      <button onClick={() => props.TakeData()}>click me</button>
       <div className='Table'>
         <table className='Table_Head'>
           <thead>
@@ -45,4 +51,4 @@ function Table() {
   )
 }
 
-export default Table
+export default connect(showdata, getData)(Table)

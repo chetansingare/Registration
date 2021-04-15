@@ -1,7 +1,18 @@
 import React, { useState } from 'react'
 import './Entries.css'
+import thunkAction from './thunkAction'
 
-function Entries() {
+
+function Transfer(dispatch){
+  return(
+    {
+      add:(Data)=>dispatch(thunkAction(Data))
+    }
+  )
+}
+
+
+function Entries(props) {
 
   const[Data,UpdatedData]=useState({
     Name:'',
@@ -9,6 +20,11 @@ function Entries() {
     Age:'',
     Contact:''
   })
+
+  function send(event){
+    event.preventDefault()
+    props.add(Data)
+  } 
 
   return (
     <>
@@ -26,7 +42,7 @@ function Entries() {
         <input className='Form_Mid_Input'  value={Data.Contact} onChange={(event)=>UpdatedData({...Data,Contact:event.target.value})}/>
       </div></div>
       <div className='Form_Bottom'>
-            <button>Submit &gt;&gt; </button>
+            <button onClick={send}>Submit &gt;&gt; </button>
           </div>
     </>
   );

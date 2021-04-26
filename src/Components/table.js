@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useEffect } from "react";
 import thunkGetAction from "./thunk2";
 import './Table.css'
 import { connect } from "react-redux";
@@ -10,41 +10,56 @@ function getData(dispatch) {
 }
 
 const showdata = (state) => ({
-  display: state.thunkreducer.state
+  display: state.getReducer
 })
 
 function Table(props) {
-  console.log(typeof(props.display),props.display);
-  // const table_list = props.display.map((element, index) => {
-  //   return (
-  //     <tr key={index}>
-  //       <td>{index + 1}</td>
-  //       <td>
-  //         <p>{element.firstName}</p>
-  //       </td>
-  //       <td>
-  //         <p>{element.lastName}</p>
-  //       </td>
-  //       <td>edit</td>
-  //       <td>delete</td>
-  //     </tr>
-  //   )
-  // })
+  useEffect(()=>{
+    props.TakeData()
+  },[])
+  
+  const table_list = props.display.map((element, index) => {
+    return (
+      <tr key={index}>
+        <td>
+          {index+1}
+        </td>
+        <td>
+          <p>{element.Name}</p>
+        </td>
+        <td>
+          <p>{element.Age}</p>
+        </td>
+        <td>
+          <p>{element.Email}</p>
+          </td>
+        <td>
+          <p>{element.Contact}</p>
+          </td>
+          <td>
+          <button>Edit</button>
+          </td>
+          <td>
+          <button>Delete</button>
+          </td>
+      </tr>
+    )
+  })
 
   return (
     <>
-      <button onClick={() => props.TakeData()}>click me</button>
       <div className='Table'>
         <table className='Table_Head'>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Age</th>
-              <th>Contact</th>
+              <th className="th-data">#</th>
+              <th className="th-data">Name</th>
+              <th className="th-data">Age</th>
+              <th className="th-data">Email</th>
+              <th className="th-data">Contact</th>
             </tr>
           </thead>
-          {/* <tbody>{table_list}</tbody> */}
+          <tbody>{table_list}</tbody>
         </table>
       </div>
     </>

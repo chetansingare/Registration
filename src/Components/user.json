@@ -1,25 +1,12 @@
 {
   "user": [
     {
-      "Name": "asd",
-      "Email": "acasc",
-      "Age": "asc",
-      "Contact": "asc",
+      "Name": "Narsingh",
+      "Email": "Narsingh@gmail.com",
+      "Age": "20",
+      "Contact": "8349377776",
       "id": 1
-    },
-    {
-      "Name": "sdad",
-      "Email": "sadda",
-      "Age": "asdad",
-      "Contact": "asdsa",
-      "id": 2
-    },
-    {
-      "Name": "asc asdasd",
-      "Email": "chetansingare.cs@gmail.com",
-      "Age": "",
-      "Contact": "",
-      "id": 3
     }
+    
   ]
 }

@@ -10,6 +10,10 @@ function thunkAction(InitialData) {
           type: "Postdata",
           userData: data
         })
+        dispatch({
+          type: "setAppStatus",
+          status: data.Name + "created"
+        })
       },
       (reject) => {
         dispatch({

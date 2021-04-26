@@ -5,6 +5,7 @@ import Entries from './Entries'
 import Heading from './Heading'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Table from './table'
+import SnackBar from './Snack'
 
 function Form() {
   return (
@@ -23,6 +24,7 @@ function Form() {
           </div>
         </div>
       </div>
+      <SnackBar />
     </>
   )
 }

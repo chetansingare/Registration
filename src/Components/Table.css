@@ -4,3 +4,6 @@
 .Table_Head{
     width: 100%;
 }
+.th-data{
+    text-align: left;
+}

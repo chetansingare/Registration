@@ -2,10 +2,14 @@ import { React, useEffect } from "react";
 import thunkGetAction from "./thunk2";
 import './Table.css'
 import { connect } from "react-redux";
+import DeleteAction from './DeleteAction'
+import { edit } from './editAction'
 
 function getData(dispatch) {
   return ({
-    TakeData: () => dispatch(thunkGetAction())
+    TakeData: () => dispatch(thunkGetAction()),
+    DeleteUser: (userData) => dispatch(DeleteAction(userData)),
+    EditUser: (userData) => dispatch(edit(userData)),
   })
 }
 
@@ -14,15 +18,15 @@ const showdata = (state) => ({
 })
 
 function Table(props) {
-  useEffect(()=>{
+  useEffect(() => {
     props.TakeData()
-  },[])
-  
+  }, [])
+
   const table_list = props.display.map((element, index) => {
     return (
-      <tr key={index}>
+      <tr key={element.id}>
         <td>
-          {index+1}
+          {index + 1}
         </td>
         <td>
           <p>{element.Name}</p>
@@ -32,16 +36,23 @@ function Table(props) {
         </td>
         <td>
           <p>{element.Email}</p>
-          </td>
+        </td>
         <td>
           <p>{element.Contact}</p>
-          </td>
-          <td>
-          <button>Edit</button>
-          </td>
-          <td>
-          <button>Delete</button>
-          </td>
+        </td>
+        <td>
+          <button onClick={() => props.EditUser(element)}>Edit</button>
+        </td>
+        <td>
+          <img
+            onClick={() => {
+              props.DeleteUser(element)
+              // dispatchGetUser()
+            }}
+            className="btn-img"
+            src="https://www.flaticon.com/svg/vstatic/svg/1345/1345874.svg?token=exp=1618650120~hmac=9a4c4cf8bff151a8427c59b6229c920b"
+            alt="delete" />
+        </td>
       </tr>
     )
   })

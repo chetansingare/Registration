@@ -1,0 +1,18 @@
+.Form_Main{
+    background-image: url(https://mcdn.wallpapersafari.com/medium/23/17/zBJw45.jpg);
+    height: 740px;
+}
+.Form{
+    width:1164px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 100px;
+}
+.Form_Top{
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}
+.Form_Mid{
+    background-color: white;
+}

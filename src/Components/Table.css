@@ -1,0 +1,18 @@
+.Table{
+    background-color: lightgray;
+}
+.Table_Head{
+    width: 100%;
+}
+.th-data{
+    text-align: left;
+}
+.sortingData{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-weight: bold;
+}
+.sortingData:hover{
+    background-color: darkgray;
+}

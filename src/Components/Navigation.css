@@ -1,0 +1,41 @@
+.Form_Mid_button{    
+    background-color: darkgray;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.Form_Mid_button a{
+    color: black;
+    text-decoration:none;
+}
+.Form_Mid_Button_Left{
+    width:50%;
+    padding: 20px;
+    background-color: transparent;
+    background-color: lightgray;
+    font-family: Jazz LET, fantasy;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.Form_Mid_Button_Left:hover{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: darkslategray;
+    color: white;
+
+}
+.Form_Mid_Button_Right{
+    width:50%;
+    padding: 20px;
+    background-color: transparent;
+    background-color: lightgray;
+    font-family: Jazz LET, fantasy;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.Form_Mid_Button_Right:hover{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: darkslategray;
+    color: white;
+}

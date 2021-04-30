@@ -4,12 +4,14 @@ import './Table.css'
 import { connect } from "react-redux";
 import DeleteAction from './DeleteAction'
 import { edit } from './editAction'
+import sort from "./SortAction";
 
 function getData(dispatch) {
   return ({
     TakeData: () => dispatch(thunkGetAction()),
     DeleteUser: (userData) => dispatch(DeleteAction(userData)),
     EditUser: (userData) => dispatch(edit(userData)),
+    Sort: (userData, a) => dispatch(sort(userData, a))
   })
 }
 
@@ -63,9 +65,20 @@ function Table(props) {
         <table className='Table_Head'>
           <thead>
             <tr>
-              <th className="th-data">#</th>
-              <th className="th-data">Name</th>
-              <th className="th-data">Age</th>
+              <th className="th-data">
+                <button  className='sortingData' onClick={() => props.TakeData()}>
+                  #
+                </button>
+              </th>
+              <th className="th-data">
+                <button  className='sortingData' onClick={() => props.Sort(props.display, "Name")}>
+                  Name
+                </button>
+              </th>
+              <th className="th-data">
+                <button className='sortingData'  onClick={() => props.Sort(props.display, "Age")}>
+                  Age
+                  </button></th>
               <th className="th-data">Email</th>
               <th className="th-data">Contact</th>
             </tr>
